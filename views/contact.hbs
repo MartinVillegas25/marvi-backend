@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+{{>head}}
+
+<body>
+    <!-- Header -->
+    {{>nav}}
+    <!-- Close Header --> 
+
+
+            <!-- Start Contact Form -->
+            {{#if mostrar}}
+              <div class="col-12 m-auto alert alert-success">
+                    <h3 class="aling-text-center">{{mensaje}}</h3>
+              </div>
+             {{/if}} 
+            <div class="col-lg-6 m-auto py-4 ">
+                <form id="form" class="contact-form row" method="POST" action="/enviar" role="form" >
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input  type="text" class="form-control form-control-lg light-300" id="floatingname" name="name" placeholder="Name" required>
+                            <label for="floatingname light-300">Nombre</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <select class="form-select light-300 py-1" aria-label="Default select example">
+                                <option class="floatingname light-300" selected>Pais</option>
+                                <option value="1">Argentina</option>
+                                <option value="2">Brasil</option>
+                                <option value="3">Chile</option>
+                                <option value="3">Estados Unidos</option>
+                                <option value="3">España</option>
+                                <option value="3">Mexico</option>
+                                <option value="3">Uruguay</option>
+                                <option value="3">Otro</option>
+                              </select>
+                        </div>
+                    </div>
+                    
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="email" class="form-control form-control-lg light-300" id="floatingemail" name="email" placeholder="Email" required>
+                            <label for=" email floatingemail light-300">Email</label>
+                        </div>
+                    </div><!-- End Input Email -->
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingphone" name="phone" placeholder="Phone">
+                            <label for="floatingphone light-300">Teléfono</label>
+                        </div>
+                    </div><!-- End Input Phone -->
+
+                    
+                    <!-- End Input Company Name -->
+
+                    <div class="col-12">
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingsubject" name="subject" placeholder="Subject">
+                            <label for="floatingsubject light-300">Asunto</label>
+                        </div>
+                    </div><!-- End Input Subject -->
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <textarea type="textarea" name="message" class="form-control light-300" rows="8" placeholder="Message" id="floatingtextarea" required></textarea>
+                            <label for="floatingtextarea light-300">Mensaje</label>
+                        </div>
+                    </div><!-- End Textarea Message -->
+
+                    <div class="col-md-12 col-12 m-auto text-end">
+                        <button id="botonformulario" type="submit" class="btn btn-secondary rounded-pill px-md-5 px-4 py-2 radius-0 text-light light-300">Enviar Mensaje</button>
+                    </div>
+
+                </form>
+            </div>
+            </div>
+            <!-- End Contact Form -->
+
+
+        </div>
+      
+    </section>
+    <!-- End Contact -->
+
+
+     <!-- Start Footer -->
+   {{>footer}}
+    <!-- End Footer -->
+
+
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/formulario.js"></script>
+
+
+</body>
+
+</html>

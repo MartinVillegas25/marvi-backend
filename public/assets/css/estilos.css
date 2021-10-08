@@ -1,0 +1,367 @@
+/*
+---------------------------------------------
+Índice
+------------------------------------------------
+1. Typography
+2. Main Nav
+3. Home
+4. About
+5. Work
+6. Single Work
+7. Pricing
+8. Contact
+--------------------------------------------- */
+
+html {font-family: 'Roboto', sans-serif;}
+/* Typography */
+p, a {font-weight: 400;}
+.h2 {font-size: 40px;}
+.h3 {font-size: 28px;}
+.light-300 {
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 300;
+}
+.regular-400 {
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 400;
+}
+.semi-bold-600 {
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 500;
+}
+.typo-space-line::after,
+.typo-space-line-center::after {
+  content: "";
+  width: 150px;
+  display:block;
+  position: absolute;
+  border-bottom:  5px solid rgb(250, 49, 49);
+  padding-top: .5em;
+}
+.typo-space-line-center::after {
+  left: 50%;
+  margin-left: -75px;
+}
+/* Main Nav */
+#main_nav .nav-item .nav-link:hover {color: #fff;}
+
+
+/* Home */
+
+#conteinercarrusel{
+  height: 50%;
+  width: 100%;
+}
+#index_banner {
+  background-color: #fff;
+  background-position: center center; background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+#index_banner .carousel-item {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  
+}
+
+.carrusel1{
+  background-image: url(../../fotos/ballena-parte-1\ -\ Copy\ \(2\).png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  
+}
+
+.carrusel2{
+  background-image: url(../../fotos/ballena-parte-2\ -\ Copy\ -\ Copy.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.carrusel3{
+  background-image: url(../../fotos/ballena-parte-3\ -\ Copy.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+
+#index_banner .carousel-item img{
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  height: 55vh;
+}
+#index_banner .carousel-control-prev i,
+#index_banner .carousel-control-next i {
+  color: #6266ea !important;
+  text-decoration: none;
+  font-size: 4em;
+}
+#index_banner .carousel-inner {
+  height: 60vh;
+}
+#index_banner .carousel-indicators li,
+#index_banner .carousel-indicators.active {
+  background-color: #6266ea !important;
+  /* las rayas de abajo del carrousel van de color azul */
+}
+
+#about{
+  margin-top: 30px;
+}
+.foto-about{
+  width: 500px;
+  height: 500px;
+  background-image: url(../../fotos/toon-myself.png);
+  background-size: cover;
+  margin: auto;
+  border-radius: 50%;
+}
+.btn:hover{
+  transform: scale(1.2);
+  background-color: black;
+  border: 2px solid black;
+  box-shadow: 2px 2px rgb(245, 77, 77);
+  color: #fff;
+}
+
+
+.recent-work.card{
+  border-radius: 10px !important;
+}
+.recent-work .recent-work-vertical {
+	background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(240, 237, 237, 0) 33.333%, rgb(78, 75, 100) 66.666%, rgba(255, 254, 254, 0) 99.999%);
+  background-size: 300% 300%;
+  background-position: 0% 100%;
+  transition: .5s;
+  cursor: pointer;
+}
+.recent-work .recent-work-vertical:hover {
+  background-position: 0% 0%;
+  transition: .5s;
+}
+.recent-work .recent-work-vertical:hover div.recent-work-content {
+  top: 50%;
+  margin-top: -2.5em;
+  position: absolute;
+}
+.recent-work .recent-work-vertical:hover * {
+  color: white;
+  transition: .5s;
+}
+
+#titulo{
+  height: 150px;
+  margin-top: 30px;
+  padding-top: 15px;
+  align-items: center;
+}
+
+#footer{
+  height: 50px;
+}
+
+
+/* About */
+#sobremi{
+  height: 60vh;
+}
+
+#sobremi img{
+  height: 60vh;
+  width: 100%;
+}
+
+.marian{
+  width: 350px;
+  height: 350px;
+  background-image: url(../../fotos/sobre\ mi.png);
+  background-size: cover;
+  margin: auto;
+  border-radius: 50%;
+}
+
+
+
+@media(max-width:578px){
+  .marian{
+    width: 250px;
+    height: 250px;
+    margin-top: 60px;
+    
+  }
+}
+
+
+.progress {
+  height: 8px;
+}
+.objective-icon {
+  border-radius: 13px;
+  width: 8rem;
+}
+.partner-wap {
+  background-color: #7276ec;
+  transition: 1s;
+  cursor: pointer;
+}
+.partner-wap:hover {
+  background-color: #b1b3f5;
+}
+.why-us {
+  background: rgb(239,239,253);
+  background: -moz-linear-gradient(0deg, rgba(239,239,253,1) 50%, rgba(255,255,255,1) 50%);
+  background: -webkit-linear-gradient(0deg, rgba(239,239,253,1) 50%, rgba(255,255,255,1) 50%);
+  background: linear-gradient(0deg, rgba(239,239,253,1) 50%, rgba(255,255,255,1) 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efeffd",endColorstr="#ffffff",GradientType=1);
+}
+
+.rounded:hover{
+  transform: scale(1.1);
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 100px;
+  box-shadow: 5px 5px solid black;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+
+
+
+/* Work */
+/* Singel Work */
+
+.related-content {
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.card-img-top{
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.card-img-top:hover{
+  filter: blur(1px);
+  transform: rotate(10deg) scale(1.2);
+}
+
+.light-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  transform: scale(0);
+}
+
+.light-box img{
+  width: 40vw;
+  max-height: 50vh;
+}
+
+.light-box:target{
+  transform: scale(1);
+}
+
+.close{
+  position: absolute;
+  top: 40px;
+  right: 80px;;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+}
+
+.clasificacion{
+  color: rgba(0, 0, 0, 0.55);
+}
+
+
+/* Pricing */
+.pricing-list {
+  margin-bottom: 1px;
+}
+.pricing-table {
+  max-width: 350px;
+  margin: auto;
+}
+.pricing-table,
+.pricing-horizontal {
+  border-radius: 15px !important;
+}
+/* Contact */
+#floatingtextarea {
+  height: 150px
+}
+/* Footer */
+footer a.text-light:hover {
+  color: #bfbfbf !important;
+  transition-duration: 0.15s;
+}
+
+
+/* login */
+
+@media(max-width:578px){
+ #login {
+  background-image: url(../../fotos/login.png);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+ }
+ .sesion{
+   margin-left: 40px;
+   margin-right: 40px;
+   padding-top:30px;
+ }
+  
+}
+
+@media(min-width:578px){
+  #login{
+    display: flex;
+    
+  }
+  .sesion{
+    width: 50%;
+    height: 100vh;
+    margin-top:100px;
+    
+    
+  }
+  .login{
+    background-image: url(../../fotos/login.png);
+    background-size: cover;
+    width: 50%;
+    height: 100vh;
+  }
+  
+
+}
+
