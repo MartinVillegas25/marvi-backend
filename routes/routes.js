@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router()
-const {contacto}=require('../middlewares/contacto')
+const {contacto}=require('../middlewares/contacto');
+const dbConnection = require('../db/database')
 
 
 //rutas get del front
@@ -65,6 +66,58 @@ router.get('/login',(req, res) => {
     res.render('login')
 })
 
+router.post('/login',(req, res) => {
+    const usuario = req.body.usuario;
+    const password = req.body.contraseña;
+    let sql = 'SELECT * FROM login WHERE usuario=? AND contraseña=?'
+    dbConnection.query(sql,[usuario, password], (err,rows) => {
+        if(rows.length > 0) {
+            res.render('admin')
+        }else{
+            console.log(err);
+            res.render('login',{
+                mostrar: true,
+                mensaje: 'usuario o contraseña incorrecta'
+            })
+        }
+    })
+})
+
+
+/*----admin-----*/
+
+router.get('/admin',(req, res) => {
+    let sql= 'SELECT * FROM sobremi';
+    dbConnection.query(sql,(err, data) => {
+        if(!err){
+            res.render('admin',{
+                sobremi: data[0].aboutme,
+            })
+        }else{
+            console.log(err)
+        }
+    })
+})
+
+/*---editar sobre mi----*/
+
+router.post('/sobremi', (req, res)=>{
+    const aboutme = req.body.aboutme;
+    console.log(aboutme);
+    let sql = 'UPDATE sobremi SET aboutme=?'
+    dbConnection.query(sql,[aboutme], (err,result) => {
+       if(!err){        
+        res.render('admin',{
+            sobremi:aboutme
+        })
+       }else{
+           console.log(err);
+       }
+       
+       
+    })
+
+})
 
 
 

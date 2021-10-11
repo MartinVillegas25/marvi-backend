@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head}}
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+             <a class="navbar-brand h1" href="#">
+                <span class="text-dark h5">Marvi-</span><span class="text-danger h5">ilustraciones</span></a>
+            </a>
+            <span class="text-dark h3 m-auto">Panel de Control</span>
+         </div>
+    </nav>
+    <br>
+    <br>
+      
+  <section class="container">
+      <div class=" col-12 m-auto"> 
+          <h2 class="text-dark h2 m-auto mb-2">Sobre mi</h2>
+         <form action="/sobremi" method="post">
+             <textarea class="col-12 m-auto" name="aboutme" id="sobre-mi"  rows="10">{{sobremi}}</textarea>
+              <br>
+             <button type="submit" class="btn btn-primary m-auto">Editar</button>
+         </form>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div>
+        <h2 class="text-dark h2 m-auto mb-2">Trabajos</h2>
+        <br>
+        <h2 class="text-dark h5 m-auto mb-2">Retratos</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">id</th>
+                <th scope="col">Foto</th>
+                <th scope="col">Borrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#if fotos}}
+                {{#each fotos}}
+                <tr>
+                <th scope="row">{{id}}</th>
+                <td>{{imagen}}</td>
+                <td><button class="btn btn-danger">Borrar</button></td>
+                </tr>
+                {{/each}}
+                {{/if}}
+            </tbody>
+        </table>
+        <br>
+        <button class="btn btn-primary m-auto">Agregar foto</button>
+      </div>
+  </section>
+
+
+
+
+
+</body>
