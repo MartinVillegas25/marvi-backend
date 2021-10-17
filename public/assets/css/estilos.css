@@ -177,6 +177,11 @@ p, a {font-weight: 400;}
   height: 60vh;
 }
 
+#sobre-marian{
+  line-height:40px;
+
+}
+
 #sobremi img{
   height: 60vh;
   width: 100%;
@@ -325,6 +330,10 @@ footer a.text-light:hover {
   transition-duration: 0.15s;
 }
 
+.footerC{
+  display: flex;
+  justify-content: space-evenly;
+}
 
 /* login */
 

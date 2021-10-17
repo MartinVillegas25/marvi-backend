@@ -34,25 +34,38 @@
         <table class="table">
             <thead>
                 <tr>
-                <th scope="col">id</th>
                 <th scope="col">Foto</th>
+         
                 <th scope="col">Borrar</th>
                 </tr>
             </thead>
             <tbody>
                 {{#if fotos}}
-                {{#each fotos}}
+                {{#each foto}}
                 <tr>
-                <th scope="row">{{id}}</th>
-                <td>{{imagen}}</td>
-                <td><button class="btn btn-danger">Borrar</button></td>
+              
+                <td><img class="img-fluid" width=250px height=250px src="/uploads/{{foto}}" alt=""></td>
+         
+                <td><a href="/borrar/{{idwork}}" class="btn btn-danger">Borrar</a></td>
                 </tr>
                 {{/each}}
                 {{/if}}
             </tbody>
         </table>
         <br>
-        <button class="btn btn-primary m-auto">Agregar foto</button>
+        <div>
+            <form action="agregar" enctype="multipart/form-data" method="post">
+                <input class="form-control col-sm-9" type="file" class="form-control" id="foto" name="foto" accept=".png, .jpg, .jpeg" required>
+                <br>
+          
+                <br>
+                <button type="submit" class="btn btn-primary m-auto">Agregar foto</button>
+                {{#if error}}
+                <h6>{{mensaje}}</h6>
+                {{/if}}
+
+            </form>
+        </div>
       </div>
   </section>
 
