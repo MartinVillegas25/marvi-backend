@@ -179,11 +179,20 @@ const get_borrar = (req, res)=>{
     })
 };
 
+const get_loggout = (req, res)=>{
+    req.session.destroy(error=>{
+
+    });
+
+    res.redirect("login")
+}
+
 module.exports = {
     get_login,
     post_admin,
     get_admin,
     post_sobremi,
     post_agregar,
-    get_borrar
+    get_borrar,
+    get_loggout
 }

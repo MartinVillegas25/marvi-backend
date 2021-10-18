@@ -7,29 +7,35 @@
     <!-- Header -->
     {{>nav}}
     <!-- Close Header -->
+    <br>
+    <br>
 
-  <section class="container py-2 "></section>
-    {{#if fotos}}
-    {{#each foto}}
-
+  <section class="container py-2">
+    
     <!-- Start Our Work -->
    
-        <div  class="row projects gx-lg-5">
-            <a href="#imagen" class="col-sm-6 col-lg-3 text-decoration-none project cultura">
-                <div class="service-work overflow-hidden card mb-5 mx-5 m-sm-0">
+        <div  class="row projects  gx-lg-5">
+            {{#if fotos}}
+            {{#each foto}}
+
+            <a href="#{{foto}}" class="col-sm-6 col-lg-3 text-decoration-none project ">
+                <div class="card mb-5 mx-5 m-sm-0">
                     <img loading="lazy" class="card-img-top"  src="/uploads/{{foto}}" alt="...">
                 </div>
+                
+            {{/each}}
+            {{/if}}
         </div>
 
-     {{/each}}
-    {{/if}}
     </section>
+    <br>
+    <br>
     <!-- End Our Work -->
   <!--Start transition-->
     <section class="transicionfotos">
     {{#if fotos}}
     {{#each foto}}
-        <article class="light-box" id="imagen">
+        <article class="light-box" id="{{foto}}">
             <img src="/uploads/{{foto}}" alt="">
             <a href="#" class="close">X</a>
         </article>

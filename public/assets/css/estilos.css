@@ -1,16 +1,4 @@
-/*
----------------------------------------------
-Índice
-------------------------------------------------
-1. Typography
-2. Main Nav
-3. Home
-4. About
-5. Work
-6. Single Work
-7. Pricing
-8. Contact
---------------------------------------------- */
+
 
 html {font-family: 'Roboto', sans-serif;}
 /* Typography */
@@ -246,6 +234,8 @@ p, a {font-weight: 400;}
 
 /* Work */
 /* Singel Work */
+
+
 
 .related-content {
   border-radius: 20px;

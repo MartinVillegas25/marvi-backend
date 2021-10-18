@@ -13,7 +13,8 @@ const { get_login,
         get_admin,
         post_sobremi,
         post_agregar,
-        get_borrar} = require('../controller/back/controller-back')
+        get_borrar,
+        get_loggout} = require('../controller/back/controller-back')
 
 
 //rutas get del front
@@ -49,6 +50,10 @@ router.post('/agregar', post_agregar)
 
 /** borrar fotos */
 router.get('/borrar/:id',get_borrar)
+
+/*--loggout--*/
+
+router.get('/loggout', get_loggout)
 
 
 module.exports = router;
